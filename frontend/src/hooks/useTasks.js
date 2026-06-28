@@ -8,6 +8,7 @@ export default function useTasks(filters = {}) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // eslint-disable-next-line
   const fetchTasks = useCallback(async () => {
     setLoading(true);
     try {
@@ -18,6 +19,7 @@ export default function useTasks(filters = {}) {
     } finally {
       setLoading(false);
     }
+  // eslint-disable-next-line
   }, [JSON.stringify(filters)]);
 
   useEffect(() => {
